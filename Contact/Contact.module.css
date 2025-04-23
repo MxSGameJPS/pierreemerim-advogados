@@ -1,0 +1,201 @@
+.contact {
+  padding: 5rem 2rem;
+  background-color: #141414; /* Tom de preto/cinza muito escuro */
+  color: #e0e0e0;
+}
+
+.contactTitle {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 4rem; /* Aumentar margem inferior */
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.contactTitle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #b8860b;
+}
+
+.contactContent {
+  display: flex;
+  /* Revertendo para coluna em telas menores */
+  flex-direction: column;
+  gap: 4rem; /* Aumentar o espaçamento geral */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Layout em linha para telas maiores */
+@media (min-width: 992px) {
+  .contactContent {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+}
+
+/* Coluna para Informações e Mapa */
+.contactInfoMapColumn {
+  flex: 1.2; /* Dar um pouco mais de espaço */
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem; /* Espaço entre info e mapa */
+}
+
+.contactInfo {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contactInfo h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff; /* Branco */
+  border-left: 4px solid #b8860b; /* Detalhe dourado */
+  padding-left: 1rem;
+}
+
+.infoItem {
+  display: flex;
+  align-items: start; /* Alinha ícone no topo */
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  color: #cccccc; /* Cinza claro */
+}
+
+.infoItem svg {
+  margin-right: 1rem;
+  color: #b8860b; /* Dourado */
+  font-size: 1.5rem;
+  flex-shrink: 0; /* Impede que o ícone encolha */
+  margin-top: 3px; /* Ajuste vertical */
+}
+
+.socialLinks {
+  margin-top: 2rem;
+}
+
+.socialLinks a {
+  color: #cccccc; /* Cinza claro */
+  margin-right: 1rem;
+  font-size: 1.8rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socialLinks a:hover {
+  color: #b8860b; /* Dourado */
+  transform: scale(1.1);
+}
+
+.contactFormContainer {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contactFormContainer h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff; /* Branco */
+  border-left: 4px solid #b8860b; /* Detalhe dourado */
+  padding-left: 1rem;
+}
+
+.contactForm label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #cccccc; /* Cinza claro */
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #444; /* Borda cinza escura */
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #1f1f1f; /* Fundo cinza escuro */
+  color: #ffffff; /* Texto branco */
+  transition: border-color 0.3s ease;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  outline: none;
+  border-color: #b8860b; /* Borda dourada no focus */
+  box-shadow: 0 0 0 2px rgba(184, 134, 11, 0.3); /* Brilho dourado sutil */
+}
+
+.contactForm textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.submitButton {
+  background-color: #b8860b; /* Dourado */
+  color: #ffffff; /* Branco */
+  padding: 0.9rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.submitButton:hover {
+  background-color: #a0740a; /* Dourado mais escuro */
+  transform: translateY(-2px);
+}
+
+/* Estilo para mensagem de sucesso */
+.formSuccess {
+  background-color: #1f1f1f;
+  color: #cccccc;
+  padding: 2rem;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid #b8860b;
+}
+
+.formSuccess p {
+  margin-bottom: 1rem;
+}
+
+.mapContainer {
+  width: 100%;
+}
+
+.mapContainer h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  border-left: 4px solid #b8860b;
+  padding-left: 1rem;
+}
+
+.mapContainer iframe {
+  width: 100%;
+  height: 350px; /* Altura fixa ou ajustável */
+  border: 1px solid #444 !important; /* Sobrescrever estilo inline se necessário */
+  border-radius: 8px !important; /* Sobrescrever estilo inline se necessário */
+  filter: grayscale(80%) contrast(1.1); /* Estilo mais sóbrio para o mapa */
+  transition: filter 0.3s ease;
+}
+
+.mapContainer iframe:hover {
+  filter: grayscale(0%) contrast(1);
+}

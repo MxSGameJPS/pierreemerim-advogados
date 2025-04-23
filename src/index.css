@@ -1,0 +1,191 @@
+/* Reset básico e estilos globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Importação de fontes (opcional) */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap");
+
+/* Variáveis de cores */
+:root {
+  --color-primary: #000000; /* Preto */
+  --color-secondary: #b8860b; /* Dourado */
+  --color-accent: #c0c0c0; /* Prateado */
+  --color-white: #ffffff;
+  --color-gray-light: #f9f9f9;
+  --color-gray: #ccc;
+  --color-gray-dark: #666;
+}
+
+/* Estilos para links globais */
+a {
+  text-decoration: none;
+  color: var(--color-secondary);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #906c0a; /* Dourado mais escuro */
+}
+
+/* Estilos para cabeçalhos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+/* Estilos para botões globais */
+button,
+.button {
+  cursor: pointer;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover,
+.button:hover {
+  background-color: #906c0a; /* Dourado mais escuro */
+  transform: translateY(-2px);
+}
+
+/* Estilos para imagens */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilos para seções */
+section {
+  padding: 4rem 2rem;
+}
+
+/* Utilitários */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  section {
+    padding: 3rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  section {
+    padding: 2rem 1rem;
+  }
+}
+
+/* Animações de Scroll */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Classes para aplicar animações */
+.animate {
+  opacity: 0; /* Começa invisível */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate.visible {
+  opacity: 1;
+  transform: none; /* Reset transform quando visível */
+}
+
+/* Variações das animações */
+.fadeInUp {
+  transform: translateY(30px);
+}
+
+.fadeInLeft {
+  transform: translateX(-30px);
+}
+
+.fadeInRight {
+  transform: translateX(30px);
+}
+
+/* Adiciona delay para elementos em grid/lista (exemplo) */
+.delay-1 {
+  transition-delay: 0.1s;
+}
+.delay-2 {
+  transition-delay: 0.2s;
+}
+.delay-3 {
+  transition-delay: 0.3s;
+}
+/* Adicione mais delays conforme necessário */
+
+/* Suavização de scroll (opcional, pode causar problemas em alguns browsers) */
+/* html {
+  scroll-behavior: smooth;
+} */

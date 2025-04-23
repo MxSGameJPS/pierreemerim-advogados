@@ -1,0 +1,68 @@
+.about {
+  padding: 5rem 2rem;
+  background-color: #141414; /* Tom de preto/cinza muito escuro */
+  color: #e0e0e0; /* Cinza bem claro para texto */
+}
+
+.aboutContent {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.aboutText {
+  flex: 1;
+  min-width: 300px;
+}
+
+.aboutText h2 {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  color: #ffffff; /* Branco */
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+/* Linha dourada abaixo do título */
+.aboutText h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background-color: #b8860b; /* Dourado */
+}
+
+.aboutText h2 span {
+  color: #b8860b; /* Dourado */
+}
+
+.aboutText p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #cccccc; /* Cinza claro */
+}
+
+.aboutImageContainer {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.aboutImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  border: 1px solid #333; /* Borda sutil */
+}
+
+/* Estilos adicionais para separar parágrafos se necessário */
+.aboutText p + p {
+  margin-top: 1.5rem;
+}

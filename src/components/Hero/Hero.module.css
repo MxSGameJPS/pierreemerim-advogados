@@ -1,0 +1,104 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh; /* Altura da viewport */
+  padding: 2rem;
+  background-color: #000000; /* Preto */
+  color: #ffffff; /* Branco */
+  text-align: center;
+  position: relative;
+
+  /* Adicionar imagem de fundo com sobreposição escura */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/images/escritorio.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.heroContent {
+  max-width: 800px;
+  z-index: 1;
+  padding: 2rem;
+  border-radius: 8px;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Fundo semitransparente para melhorar legibilidade */
+  -webkit-backdrop-filter: blur(5px); /* Para Safari */
+  backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.heroTitle {
+  font-size: 3.5rem; /* Tamanho grande */
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.heroTitle span {
+  color: #b8860b; /* Dourado */
+  text-shadow: 0 0 10px rgba(184, 134, 11, 0.5); /* Brilho suave */
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  color: #e0e0e0; /* Cinza muito claro */
+}
+
+.ctaButton {
+  background-color: #b8860b; /* Dourado */
+  color: #ffffff; /* Branco */
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.ctaButton:hover {
+  background-color: #a0740a; /* Dourado mais escuro */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(184, 134, 11, 0.4);
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 60vh;
+    background-attachment: scroll; /* Para melhor compatibilidade em dispositivos móveis */
+  }
+  .heroContent {
+    padding: 1.5rem;
+  }
+  .heroTitle {
+    font-size: 2.8rem;
+  }
+  .heroSubtitle {
+    font-size: 1.2rem;
+  }
+  .ctaButton {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+  .heroSubtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+}

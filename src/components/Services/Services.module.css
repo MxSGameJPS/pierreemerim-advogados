@@ -1,0 +1,86 @@
+.services {
+  padding: 5rem 2rem;
+  background-color: #111111; /* Preto/Cinza muito escuro */
+  color: #e0e0e0;
+}
+
+.services h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  color: #ffffff; /* Branco */
+  position: relative;
+  display: inline-block; /* Para a linha ficar do tamanho do texto */
+  padding-bottom: 0.5rem;
+}
+
+/* Linha dourada abaixo do título */
+.services h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #b8860b; /* Dourado */
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.serviceCard {
+  background-color: #1f1f1f; /* Cinza escuro para o card */
+  padding: 2.5rem 2rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #333; /* Borda sutil */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  color: #cccccc; /* Cor padrão do texto no card */
+}
+
+.serviceCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(184, 134, 11, 0.2); /* Sombra dourada sutil */
+  border-color: #b8860b; /* Borda dourada no hover */
+}
+
+.serviceIcon {
+  font-size: 3.5rem;
+  color: #b8860b; /* Dourado */
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.serviceCard:hover .serviceIcon {
+  transform: scale(1.1);
+}
+
+.serviceCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff; /* Branco para o título do card */
+}
+
+.serviceCard p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #b0b0b0; /* Cinza um pouco mais claro para descrição */
+}
+
+.serviceCard a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #b8860b; /* Dourado */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.serviceCard a:hover {
+  text-decoration: underline;
+}

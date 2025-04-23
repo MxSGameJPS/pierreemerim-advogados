@@ -95,7 +95,7 @@ function Contact() {
               </div>
               <div className={styles.infoItem}>
                 <FaPhoneAlt />
-                <span>(61) 99622-1136</span>
+                <span>(51) 2192-0050</span>
               </div>
               <div className={styles.infoItem}>
                 <FaEnvelope />
